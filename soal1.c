@@ -53,12 +53,12 @@ float median = 0;
     // OUTPUT
     printf("COUNT %d", n-1);
     
-    printf("SORTED");
+    printf(" SORTED");
     for(int i = 0; i < n-1; i++){ 
     printf(" %d", arr[i]);
     }
 
-    printf("MEDIAN %.2f", median);
+    printf(" MEDIAN %.2f", median);
 
 
     return 0;
