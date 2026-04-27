@@ -16,7 +16,8 @@ int main(){
 int *arr = NULL;
 int x;
 int n = 0;
-float median = 0;
+float mediangenap = 0;
+int medianganjil = 0;
 
     while(x != -1){ // input
         n++;
@@ -25,11 +26,17 @@ float median = 0;
         arr[n-1] = x;
     }
 
-    // for(int i = 0; i < n-1; i++){ // TESTING INPUT
+    // TESTING INPUT
+    // for(int i = 0; i < n-1; i++){ 
     // printf("%d ", arr[i]);
     // }
 
-    for(int i = 0; i < n-2; i++){ // bubble sort ascending
+    // OUTPUT COUNT
+    printf("COUNT %d", n-1);
+
+
+    // BUBBLE SORT ASCENDING
+    for(int i = 0; i < n-2; i++){ 
         for(int j = 0; j < (n-2)-i; j++){ // pakai n-2 agar angka terakhir (-1) tidak ikut tersort
             if(arr[j] > arr[j+1]){
                 int temp = arr[j];
@@ -39,28 +46,25 @@ float median = 0;
         }
     }
 
-    // for(int i = 0; i < n-1; i++){ // TESTING SORTING
-    // printf("%d ", arr[i]);
-    // }
-
-    if((n-1) % 2 == 0){
-        median = (arr[((n-1)/2)-1]+arr[((n-1)/2)])/2.0; // median genap
-    } else {
-        median = arr[((n-1)/2)]; // median ganjil
-    }
-
-
-    // OUTPUT
-    printf("COUNT %d", n-1);
-    
+    // OUTPUT SORT
     printf(" SORTED");
     for(int i = 0; i < n-1; i++){ 
     printf(" %d", arr[i]);
     }
 
-    printf(" MEDIAN %.2f", median);
+    // TESTING SORTING
+    // for(int i = 0; i < n-1; i++){ 
+    // printf("%d ", arr[i]);
+    // }
 
+    // MEDIAN & OUTPUT
+    if((n-1) % 2 == 0){
+        mediangenap = (arr[((n-1)/2)-1]+arr[((n-1)/2)])/2.0; // median genap
+        printf(" MEDIAN %.2f", mediangenap);
+    } else {
+        medianganjil = arr[((n-1)/2)]; // median ganjil
+        printf(" MEDIAN %d", medianganjil);
+    }
 
     return 0;
-
 }
