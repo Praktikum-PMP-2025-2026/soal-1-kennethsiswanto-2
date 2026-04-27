@@ -44,7 +44,7 @@ float median = 0;
     // }
 
     if((n-1) % 2 == 0){
-        median = (arr[((n-1)/2)-1]+arr[((n-1)/2)])/2; // median genap
+        median = (arr[((n-1)/2)-1]+arr[((n-1)/2)])/2.0; // median genap
     } else {
         median = arr[((n-1)/2)]; // median ganjil
     }
